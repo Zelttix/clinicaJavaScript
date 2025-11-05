@@ -1,0 +1,176 @@
+header {
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+header img {
+  transition: transform 0.3s ease;
+  max-width: 200px;
+}
+
+header img:hover {
+  transform: scale(1.05);
+}
+
+header nav {
+  margin-left: 160px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 2px 6px;
+  background: transparent;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,74,82,0.08);
+  margin-top: 6px;
+}
+
+header nav ul li {
+  transition: transform 0.3s;
+}
+
+header nav ul li:hover {
+  transform: translateY(-4px) scale(1.08);
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-size: 1.15rem;
+  color: #044a52 !important;
+  font-family: 'Trebuchet MS', sans-serif;
+  transition: color 0.3s, transform 0.3s;
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background: none;
+}
+
+header nav ul li a:hover {
+  transform: scale(1.13);
+  color: #00d5c3;
+  background: rgba(0,213,195,0.10);
+  box-shadow: 0 2px 12px rgba(0,213,195,0.10);
+}
+
+
+main {
+  max-width: 600px;
+  margin: 40px auto 40px auto;
+  padding: 40px 24px;
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(0,74,82,0.12);
+  border: 3px solid #00d5c3;
+}
+
+#agendamento h1 {
+  color: #044a52;
+  font-size: 2.2rem;
+  margin-bottom: 32px;
+  font-family: 'Trebuchet MS', sans-serif;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.form-agendamento {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-agendamento label {
+  font-weight: bold;
+  color: #044a52;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+.form-agendamento input,
+.form-agendamento select {
+  padding: 10px 12px;
+  border: 2px solid #00d5c3;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: 'Trebuchet MS', sans-serif;
+  background: #e0f7fa;
+  margin-bottom: 8px;
+  transition: border-color 0.3s;
+}
+
+.form-agendamento input:focus,
+.form-agendamento select:focus {
+  border-color: #044a52;
+  outline: none;
+}
+
+.form-agendamento .btn {
+  padding: 14px 36px;
+  background: linear-gradient(90deg, #00d5c3 0%, #044a52 100%);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  font-weight: bold;
+  box-shadow: 0 4px 16px rgba(0,74,82,0.15);
+  letter-spacing: 1px;
+  margin-top: 16px;
+}
+
+.form-agendamento .btn:hover {
+  background: linear-gradient(90deg, #044a52 0%, #00d5c3 100%);
+  transform: scale(1.07);
+  box-shadow: 0 8px 24px rgba(0,213,195,0.18);
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  align-items: center;
+  justify-content: center; 
+}
+
+
+#agendamento-msg {
+  display: block;
+  width: 100%;
+  max-width: 640px; 
+  margin: 0 auto 12px auto;
+  text-align: center;
+}
+/* garante centralização também em mobile */
+@media (max-width: 700px) {
+  .form-actions { flex-direction: row; justify-content: center; }
+  #agendamento-msg { padding: 0 8px; }
+}
+
+@media (max-width: 700px) {
+  main {
+    max-width: 98vw;
+    padding: 20px 4px;
+  }
+  #agendamento h1 {
+    font-size: 1.3rem;
+  }
+  .form-agendamento label {
+    font-size: 1rem;
+  }
+  .form-agendamento input,
+  .form-agendamento select {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agendamento - Cura +</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="agendamento-style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" aria-label="Cura mais - Início"><img src="logo2.png" alt="Logo Cura +" width="200"></a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="especialidades.html">Especialidades</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="agendamento.html" aria-current="page">Agendamentos</a></li>
+        <li><a href="#footer">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="divisoria" role="separator" aria-hidden="true"></div>
+
+  <main>
+    <section id="agendamento" aria-labelledby="h-agendamento">
+      <h1 id="h-agendamento">Agende sua Consulta</h1>
+
+      <form id="form-agendamento" class="form-agendamento" novalidate>
+        <div id="agendamento-msg" class="ag-msg" role="status" aria-live="polite"></div>
+
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="telefone" required>
+
+        <label for="especialidade">Especialidade</label>
+        <select id="especialidade" name="especialidade" required>
+          <option value="">Selecione</option>
+          <option>Cardiologia</option>
+          <option>Dermatologia</option>
+          <option>Pediatria</option>
+          <option>Ginecologia</option>
+          <option>Ortopedia</option>
+          <option>Endocrinologia</option>
+          <option>Odontologia</option>
+        </select>
+
+        <label for="data">Data desejada</label>
+        <input type="date" id="data" name="data" required>
+
+        <label for="horario">Horário</label>
+        <input type="time" id="horario" name="horario" required>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Agendar</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer id="footer">
+    <p>&copy; 2025 Cura +. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="global.js" defer></script>
+  <script src="site.js" defer></script>
+  <script src="agendamento.js" defer></script>
+  <script src="social.js" defer></script>
+</body>
+</html>

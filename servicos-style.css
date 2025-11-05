@@ -1,0 +1,208 @@
+body {
+  background: linear-gradient(120deg, #e0f7fa 0%, #ffffff 100%);
+  min-height: 100vh;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-width: 1100px;
+  margin: 10px auto 40px auto; /* Reduz o espaço acima do main */
+  padding: 64px 5px; 
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(0,74,82,0.12);
+  border: 3px solid #00d5c3;
+}
+
+#servicos {
+  text-align: center;
+  padding: 32px 0 48px 0;
+}
+
+#servicos h1 {
+  color: #044a52;
+  font-size: 2.6rem;
+  margin-bottom: 48px;
+  font-family: 'Trebuchet MS', sans-serif;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(0,213,195,0.08);
+}
+
+.procurados dl {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.procurados dl > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 3px solid #00d5c3;
+  border-radius: 24px;
+  padding: 32px 16px;
+  background: linear-gradient(135deg, #ffffff 60%, #e0f7fa 100%);
+  box-shadow: 0 4px 24px rgba(0,213,195,0.10);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  max-width: 340px; 
+  min-width: 220px;
+  margin-bottom: 32px;
+}
+
+.procurados dl > div:hover {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 0 12px 32px rgba(0, 213, 195, 0.18);
+  border-color: #044a52;
+  cursor: pointer;
+}
+
+.procurados dl > div img {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 2px 8px rgba(0,213,195,0.15));
+}
+
+.procurados dt {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  color: #044a52;
+  letter-spacing: 1px;
+}
+
+.procurados dd {
+  color: #00d5c3;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+.procurados .btn {
+  width: 260px;
+  margin: 48px auto 0 auto;
+  display: block;
+  padding: 14px 36px;
+  background: linear-gradient(90deg, #00d5c3 0%, #044a52 100%);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  font-weight: bold;
+  box-shadow: 0 4px 16px rgba(0,74,82,0.15);
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.procurados .btn::after {
+  content: "";
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(255,255,255,0.08);
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 30px;
+}
+
+.procurados .btn:hover {
+  background: linear-gradient(90deg, #044a52 0%, #00d5c3 100%);
+  transform: scale(1.07);
+  box-shadow: 0 8px 24px rgba(0,213,195,0.18);
+}
+
+.procurados .btn:hover::after {
+  opacity: 1;
+}
+
+/* Header */
+header {
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  background: transparent;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+header img {
+  transition: transform 0.3s ease;
+  max-width: 200px;
+}
+
+header img:hover {
+  transform: scale(1.05);
+}
+
+header nav {
+  margin-left: 0; 
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end; 
+  gap: 10px;
+  padding: 2px 6px;
+  background: transparent;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,74,82,0.08);
+  margin-top: 6px;
+}
+
+header nav ul li {
+  transition: transform 0.3s;
+}
+
+header nav ul li:hover {
+  transform: translateY(-4px) scale(1.08);
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-size: 1.15rem;
+  color: #044a52 !important;
+  font-family: 'Trebuchet MS', sans-serif;
+  transition: color 0.3s, transform 0.3s;
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background: none;
+}
+
+header nav ul li a:hover {
+  transform: scale(1.13);
+  color: #00d5c3;
+  background: rgba(0,213,195,0.10);
+  box-shadow: 0 2px 12px rgba(0,213,195,0.10);
+}
+
+@media (max-width: 900px) {
+  main {
+    padding: 16px 4px;
+    max-width: 98vw;
+  }
+  .procurados dl {
+    gap: 16px;
+  }
+  .procurados dl > div {
+    min-width: 140px;
+    max-width: 98vw;
+    padding: 18px 8px;
+  }
+  #servicos h1 {
+    font-size: 1.6rem;
+  }
+}

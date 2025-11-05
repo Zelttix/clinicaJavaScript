@@ -1,0 +1,182 @@
+/* Header e nav padronizados */
+header {
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+header img {
+  transition: transform 0.3s ease;
+  max-width: 200px;
+}
+
+header img:hover {
+  transform: scale(1.05);
+}
+
+header nav {
+  margin-left: 160px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 2px 6px;
+  background: transparent;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,74,82,0.08);
+  margin-top: 6px;
+}
+
+header nav ul li {
+  transition: transform 0.3s;
+}
+
+header nav ul li:hover {
+  transform: translateY(-4px) scale(1.08);
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-size: 1.15rem;
+  color: #044a52 !important;
+  font-family: 'Trebuchet MS', sans-serif;
+  transition: color 0.3s, transform 0.3s;
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background: none;
+}
+
+header nav ul li a:hover {
+  transform: scale(1.13);
+  color: #00d5c3;
+  background: rgba(0,213,195,0.10);
+  box-shadow: 0 2px 12px rgba(0,213,195,0.10);
+}
+
+#especialidades {
+  text-align: center;
+  background: linear-gradient(120deg, #e0f7fa 0%, #ffffff 100%);
+  padding: 64px 0 80px 0;
+  box-shadow: 0 8px 32px rgba(0,74,82,0.08);
+  border-radius: 0 0 32px 32px;
+  margin-top: 32px;
+}
+
+#especialidades h1 {
+  color: #044a52;
+  font-size: 2.8rem;
+  margin-bottom: 56px;
+  font-family: 'Trebuchet MS', sans-serif;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(0,213,195,0.08);
+}
+
+.especialidades-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.especialidade-card {
+  background: #fff;
+  border: 3px solid #00d5c3;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(0,213,195,0.10);
+  padding: 32px 28px;
+  min-width: 220px;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  margin-bottom: 32px;
+}
+
+.especialidade-card:hover {
+  transform: translateY(-12px) scale(1.04);
+  box-shadow: 0 12px 32px rgba(0, 213, 195, 0.18);
+  border-color: #044a52;
+  cursor: pointer;
+}
+
+.especialidade-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 2px 8px rgba(0,213,195,0.15));
+}
+
+.especialidade-card h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #044a52;
+  letter-spacing: 1px;
+}
+
+.especialidade-card p {
+  color: #00d5c3;
+  font-size: 1.1rem;
+  font-family: 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
+
+.btn-agendar {
+  display: block;
+  width: 260px;
+  margin: 48px auto 0 auto;
+  padding: 16px 0;
+  background: linear-gradient(90deg, #00d5c3 0%, #044a52 100%);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0,74,82,0.15);
+  letter-spacing: 1px;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-agendar:hover {
+  background: linear-gradient(90deg, #044a52 0%, #00d5c3 100%);
+  transform: scale(1.07);
+  box-shadow: 0 8px 24px rgba(0,213,195,0.18);
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .especialidades-lista {
+    gap: 16px;
+  }
+  .especialidade-card {
+    min-width: 140px;
+    max-width: 98vw;
+    padding: 18px 8px;
+  }
+  #especialidades h1 {
+    font-size: 1.6rem;
+  }
+  .especialidade-card h2 {
+    font-size: 1rem;
+  }
+  .especialidade-card p {
+    font-size: 0.95rem;
+  }
+}
